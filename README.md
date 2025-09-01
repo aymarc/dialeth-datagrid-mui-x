@@ -1,1 +1,1 @@
-# -dialeth-datagrid-mui-x
+# dialeth-datagrid-mui-x
