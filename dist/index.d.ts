@@ -35,6 +35,8 @@ type CustomDataGridDef = {
     exportFileName?: string;
     fetchMode?: (typeof FETCH_MODE)[keyof typeof FETCH_MODE];
 };
-declare function XtendedMuiDataGrid(props: CustomDataGridDef): react_jsx_runtime.JSX.Element;
 
-export { XtendedMuiDataGrid as default };
+declare function XtendedMuiGrid(props: CustomDataGridDef): react_jsx_runtime.JSX.Element;
+
+export { FETCH_MODE, XtendedMuiGrid as default };
+export type { CustomDataGridDef, FilterItem, FilterPayload, FilterPayloadDef };

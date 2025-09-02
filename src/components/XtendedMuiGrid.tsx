@@ -1,6 +1,5 @@
 import * as React from 'react';
-import {Toolbar, ToolbarButton, DataGrid } from "@mui/x-data-grid";
-import type { GridColDef } from "@mui/x-data-grid";
+import { Toolbar, ToolbarButton, DataGrid } from "@mui/x-data-grid";
 import { Box, Menu, MenuItem, Select, TextField, IconButton } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
 import AddIcon from "@mui/icons-material/Add";
@@ -14,46 +13,9 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import Stack from "@mui/material/Stack";
 import Chip from "@mui/material/Chip";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import { FETCH_MODE, FilterPayload, FilterPayloadDef, CustomDataGridDef } from "./types";
 
-
-
-const FETCH_MODE = {
-  GET: "get",
-  POST: "post",
-} as const;
-
-type FilterItem = {
-  field: string;
-  operator: string;
-  value: string | number;
-};
-
-type FilterPayload = {
-  filter?: {
-    items: FilterItem[];
-    logicOperator?: "and" | "or";
-  };
-  sort?: { field: string; sort: "asc" | "desc" }[];
-  limit?: number;
-  offset?: number;
-  [key: string]: any; // index signature
-};
-
-export type FilterPayloadDef = FilterPayload | URLSearchParams;
-
-type CustomDataGridDef = {
-  columns: GridColDef[];
-  defaultFilter: Array<Record<string, any>>;
-  handleFilterChange: (payload: FilterPayloadDef) => void;
-  gridData: Record<string, any>;
-  handleExport?: (payload: FilterPayloadDef, fileType: "csv" | "excel") => void;
-  csvExportUrl?: string;
-  excelExportUrl?: string;
-  exportFileName?: string;
-  fetchMode?: (typeof FETCH_MODE)[keyof typeof FETCH_MODE];
-};
-
-export default function XtendedMuiDataGrid(props: CustomDataGridDef) {
+function XtendedMuiGrid(props: CustomDataGridDef) {
   const {
     columns,
     defaultFilter,
@@ -419,3 +381,5 @@ export default function XtendedMuiDataGrid(props: CustomDataGridDef) {
     />
   );
 }
+
+export { XtendedMuiGrid };

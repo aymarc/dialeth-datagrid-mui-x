@@ -1,6 +1,6 @@
 {
-  "name": "@dialeth/datagrid-mui-x",
-  "version": "0.0.1",
+  "name": "dialeth-datagrid-mui-x",
+  "version": "0.0.2",
   "description": "Extended functionality of mui datagrid community for advance usage",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
