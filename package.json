@@ -2,9 +2,12 @@
   "name": "@dialeth/datagrid-mui-x",
   "version": "0.0.1",
   "description": "Extended functionality of mui datagrid community for advance usage",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup -c --bundleConfigAsCjs"
   },
   "repository": {
     "type": "git",
@@ -28,6 +31,8 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.4",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
     "react": "^19.1.1",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -40,6 +45,7 @@
     "@mui/icons-material": "^5.18.0",
     "@mui/material": "^5.18.0",
     "@mui/x-data-grid": "^8.10.1",
-    "rollup": "^4.50.0"
+    "rollup": "^4.50.0",
+    "rollup-plugin-postcss": "^4.0.2"
   }
 }

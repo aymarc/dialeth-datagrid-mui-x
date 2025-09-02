@@ -53,7 +53,7 @@ type CustomDataGridDef = {
   fetchMode?: (typeof FETCH_MODE)[keyof typeof FETCH_MODE];
 };
 
-export default function MuiDataGrid(props: CustomDataGridDef) {
+export default function XtendedMuiDataGrid(props: CustomDataGridDef) {
   const {
     columns,
     defaultFilter,
@@ -107,7 +107,7 @@ export default function MuiDataGrid(props: CustomDataGridDef) {
     window.dispatchEvent(event);
   };
 
-  const  buildParams = (payload: FilterPayload): URLSearchParams =>{
+  const buildParams = (payload: FilterPayload): URLSearchParams => {
     const params = new URLSearchParams();
 
     if (payload.filter) {
@@ -133,7 +133,7 @@ export default function MuiDataGrid(props: CustomDataGridDef) {
     });
 
     return params;
-  }
+  };
 
   const retrievePayload = (): FilterPayloadDef => {
     let reqPayload = null;
@@ -247,11 +247,11 @@ export default function MuiDataGrid(props: CustomDataGridDef) {
       }
     };
 
-    const exportMenuClick = async (fileType:"csv"|"excel") =>{
+    const exportMenuClick = async (fileType: "csv" | "excel") => {
       if (!handleExport && !excelExportUrl && !csvExportUrl) {
         console.error("No 'Export' handler specified.");
         return;
-      } else if (!handleExport && excelExportUrl || csvExportUrl) {
+      } else if ((!handleExport && excelExportUrl) || csvExportUrl) {
         const exportLink = fileType === "csv" ? csvExportUrl : excelExportUrl;
         if (!exportLink) {
           console.error("Export URL is not defined");
@@ -267,14 +267,13 @@ export default function MuiDataGrid(props: CustomDataGridDef) {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-      } else if (handleExport && excelExportUrl || csvExportUrl) {
+      } else if ((handleExport && excelExportUrl) || csvExportUrl) {
         console.error("Can not set both 'handleExport' and 'exportApiUrl' props.");
       } else if (handleExport) {
         let reqPayload = retrievePayload();
         handleExport(reqPayload, fileType);
       }
-      
-    }
+    };
 
     return (
       <Toolbar>
