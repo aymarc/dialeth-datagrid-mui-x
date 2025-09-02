@@ -194,27 +194,6 @@ GET /api/players?
 
 ---
 
-## 🛠️ Development
-
-Run the project locally:
-
-```bash
-npm run dev
-```
-
-Build the library:
-
-```bash
-npm run build
-```
-
-Run tests:
-
-```bash
-npm test
-```
-
----
 
 ## 🤝 Contributing
 
