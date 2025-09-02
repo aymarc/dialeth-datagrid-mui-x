@@ -1,0 +1,45 @@
+{
+  "name": "@dialeth/datagrid-mui-x",
+  "version": "0.0.1",
+  "description": "Extended functionality of mui datagrid community for advance usage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aymarc/dialeth-datagrid-mui-x.git"
+  },
+  "keywords": [
+    "data-grid",
+    "mui",
+    "filter",
+    "multi-column-filter",
+    "server-side-filter"
+  ],
+  "author": "Christian Hounkponou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aymarc/dialeth-datagrid-mui-x/issues"
+  },
+  "homepage": "https://github.com/aymarc/dialeth-datagrid-mui-x#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "react": "^19.1.1",
+    "rollup-plugin-dts": "^6.2.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^5.18.0",
+    "@mui/material": "^5.18.0",
+    "@mui/x-data-grid": "^8.10.1",
+    "rollup": "^4.50.0"
+  }
+}
